@@ -51,7 +51,7 @@ export default function PopularTopicsSlider({ topics, onSelect }: PopularTopicsS
                   key={topic + idx}
                   type="button"
                   onClick={() => onSelect(topic)}
-                  className="px-5 py-2 rounded-full bg-white/90 border border-primary/30 shadow-md hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary font-medium text-primary transition-all duration-200 cursor-pointer text-sm sm:text-base mx-1 min-w-[110px]"
+                  className="px-5 py-2 rounded-full bg-white/90 border border-primary/30 shadow-md hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary font-medium text-primary transition-all duration-200 cursor-pointer text-sm sm:text-base mx-1 min-w-[110px] dark:bg-[#223056] dark:text-[#f8fafc] dark:hover:bg-[#2563eb] dark:hover:text-[#fbbf24] dark:border-[#223056]"
                   aria-label={`Search quotes for ${topic}`}
                 >
                   {topic}
