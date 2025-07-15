@@ -3,14 +3,13 @@ import { useState, useTransition, useEffect } from "react";
 import InputForm from "./components/InputForm";
 import QuoteList from "./components/QuoteList";
 import { quotes } from "./lib/quotes";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { StarIcon } from "@radix-ui/react-icons";
 import PopularTopicsSlider from "./components/PopularTopicsSlider";
 
 const allTopics = [
   "Motivation", "Success", "Love", "Mindfulness", "Happiness", "Confidence", "Leadership", "Wisdom", "Friendship", "Life", "Courage", "Perseverance", "Gratitude", "Change", "Creativity", "Kindness", "Hope", "Freedom", "Passion", "Resilience", "Determination", "Integrity", "Compassion", "Adventure", "Purpose", "Optimism", "Trust", "Growth", "Peace", "Faith", "Ambition", "Balance", "Curiosity", "Empathy", "Forgiveness", "Honesty", "Inspiration", "Joy", "Patience", "Strength", "Dreams", "Belief", "Self-Love", "Authenticity", "Simplicity", "Unity", "Vision", "Acceptance", "Service", "Humor"
 ];
-const popularTopics = allTopics.slice(0, 40);
 
 function getRandomQuotes(topic: string, count = 3) {
   const filtered = quotes.filter(q => q.topic.toLowerCase() === topic.toLowerCase());
